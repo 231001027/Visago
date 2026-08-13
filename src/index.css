@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #252525;
+  }
+  body {
+    background-color: #F3F3F3;
+  }
+  * {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .vb-input {
+    @apply w-full h-[34px] px-2.5 py-1.5 text-[13px] bg-white border border-[#D5D9DE] rounded-[4px] outline-none transition-colors;
+  }
+  .vb-input:focus {
+    @apply border-[#2563EB] ring-1 ring-[#2563EB]/20;
+  }
+  .vb-input:disabled {
+    @apply bg-[#E9EDF1] text-[#6B7280] cursor-not-allowed;
+  }
+  .vb-label {
+    @apply block text-[12px] font-medium text-[#374151] mb-[5px];
+  }
+  .vb-card {
+    @apply bg-white border border-[#E0E0E0] rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.04)];
+  }
+  .vb-th {
+    @apply text-[11px] font-semibold text-[#374151] px-3 py-2 text-left border border-[#E1E4E8] bg-[#F4F5F7] whitespace-nowrap;
+  }
+  .vb-td {
+    @apply text-[11px] text-[#252525] px-3 py-2 border border-[#E1E4E8] whitespace-nowrap;
+  }
+  .vb-btn {
+    @apply inline-flex items-center justify-center gap-1.5 h-[34px] px-4 text-[12px] font-medium rounded-[5px] transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
