@@ -1,0 +1,8 @@
+# Supabase local / linked project config (optional CLI)
+project_id = "visago"
+
+[api]
+enabled = true
+
+[db]
+major_version = 15
