@@ -166,12 +166,12 @@ export default function ProfileUpdate() {
       <PageCard title="Terms & Conditions" icon={<ScrollText className="w-4 h-4" />} headerStrip="blue" className="mt-4">
         <CardBody>
           <div className="h-44 overflow-y-auto border border-[#E0E0E0] rounded-[8px] p-4 text-[12px] text-sub leading-relaxed space-y-2">
-            <p>1. I agree to make an online deposit of money into the designated Bank Accounts of DU Visas towards visa processing fees and service charges.</p>
-            <p>2. The agency is responsible for the authenticity of all documents submitted on behalf of applicants. DU Visas is not liable for visa rejections due to incorrect or incomplete documentation.</p>
-            <p>3. Processing timelines are indicative and depend on the respective embassy/consulate. DU Visas does not guarantee any fixed turnaround time.</p>
+            <p>1. I agree to make an online deposit of money into the designated Bank Accounts of Visago towards visa processing fees and service charges.</p>
+            <p>2. The agency is responsible for the authenticity of all documents submitted on behalf of applicants. Visago is not liable for visa rejections due to incorrect or incomplete documentation.</p>
+            <p>3. Processing timelines are indicative and depend on the respective embassy/consulate. Visago does not guarantee any fixed turnaround time.</p>
             <p>4. All service charges are non-refundable once an application has been submitted. Government fees are subject to the refund policy of the issuing authority.</p>
             <p>5. The agency must maintain sufficient wallet balance to initiate new applications. Pending payments attract a hold on further submissions.</p>
-            <p>6. DU Visas reserves the right to suspend or terminate agency accounts in case of fraudulent activity, misrepresentation, or breach of these terms.</p>
+            <p>6. Visago reserves the right to suspend or terminate agency accounts in case of fraudulent activity, misrepresentation, or breach of these terms.</p>
             <p>7. Any disputes shall be governed by the laws of the Republic of India and courts of Bengaluru shall have exclusive jurisdiction.</p>
           </div>
           <div className="mt-3"><Checkbox checked={agreed} onChange={setAgreed} label="I agree to the Terms & Conditions" /></div>

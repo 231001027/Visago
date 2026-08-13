@@ -7,10 +7,10 @@ export function useWalletBalance() {
   useEffect(() => {
     const sync = () => setBalance(getWalletBalance());
     window.addEventListener('storage', sync);
-    window.addEventListener('duvisas-wallet', sync);
+    window.addEventListener('visago-wallet', sync);
     return () => {
       window.removeEventListener('storage', sync);
-      window.removeEventListener('duvisas-wallet', sync);
+      window.removeEventListener('visago-wallet', sync);
     };
   }, []);
 

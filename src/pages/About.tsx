@@ -6,10 +6,10 @@ export default function About() {
     <div className="max-w-content mx-auto px-5 py-12 md:py-16">
       <p className="text-[12px] font-semibold uppercase tracking-wide text-brand-blue">About Us</p>
       <h1 className="mt-2 text-[32px] md:text-[40px] font-semibold text-ink leading-tight max-w-2xl">
-        DU Visas — passport & eVisa bookings online
+        Visago — passport & eVisa bookings online
       </h1>
       <p className="mt-4 text-[15px] text-sub leading-relaxed max-w-3xl">
-        DU Visas is built for travel businesses and individual travelers who need a reliable online channel to register visa applications,
+        Visago is built for travel businesses and individual travelers who need a reliable online channel to register visa applications,
         upload required documents, and pay service charges securely. We support both B2B travel agents and B2C clients on one platform.
       </p>
 

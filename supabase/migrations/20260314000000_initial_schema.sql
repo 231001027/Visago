@@ -1,4 +1,4 @@
--- DU Visas / Visago — initial Supabase schema
+-- Visago — initial Supabase schema
 -- Run in Supabase SQL Editor, or: supabase db push
 
 create extension if not exists "pgcrypto";

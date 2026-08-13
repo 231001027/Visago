@@ -1,5 +1,5 @@
-const WALLET_KEY = 'duvisas_wallet_balance';
-const TXN_KEY = 'duvisas_payment_txns';
+const WALLET_KEY = 'visago_wallet_balance';
+const TXN_KEY = 'visago_payment_txns';
 
 export type PaymentResult = {
   ok: true;
@@ -28,7 +28,7 @@ export function getWalletBalance(): number {
 
 export function setWalletBalance(amount: number): void {
   localStorage.setItem(WALLET_KEY, String(Math.max(0, Math.round(amount))));
-  window.dispatchEvent(new Event('duvisas-wallet'));
+  window.dispatchEvent(new Event('visago-wallet'));
 }
 
 export function creditWallet(amount: number): number {
@@ -69,7 +69,7 @@ export function isRazorpayConfigured(): boolean {
 function loadRazorpayScript(): Promise<boolean> {
   if (window.Razorpay) return Promise.resolve(true);
   return new Promise((resolve) => {
-    const existing = document.querySelector<HTMLScriptElement>('script[data-duvisas-razorpay]');
+    const existing = document.querySelector<HTMLScriptElement>('script[data-visago-razorpay]');
     if (existing) {
       existing.addEventListener('load', () => resolve(!!window.Razorpay));
       existing.addEventListener('error', () => resolve(false));
@@ -78,7 +78,7 @@ function loadRazorpayScript(): Promise<boolean> {
     const script = document.createElement('script');
     script.src = 'https://checkout.razorpay.com/v1/checkout.js';
     script.async = true;
-    script.dataset.duvisasRazorpay = '1';
+    script.dataset.visagoRazorpay = '1';
     script.onload = () => resolve(!!window.Razorpay);
     script.onerror = () => resolve(false);
     document.body.appendChild(script);
@@ -122,12 +122,12 @@ export async function startPayment(params: {
         key: getRazorpayKey(),
         amount: amount * 100,
         currency: 'INR',
-        name: 'DU Visas',
+        name: 'Visago',
         description: params.purpose,
-        image: '/du-visas-logo.png',
+        image: '/visago-icon.png',
         prefill: {
           name: params.name || 'Travel Agency',
-          email: params.email || 'agent@duvisas.com',
+          email: params.email || 'agent@visago.com',
           contact: params.contact || '',
           ...(method === 'upi' ? { method: 'upi' as const } : {}),
           ...(method === 'upi' && upiId ? { vpa: upiId } : {}),

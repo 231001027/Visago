@@ -1,51 +1,44 @@
 import { Link } from 'react-router-dom';
 
 const SIZES = {
-  sm: 'h-7',
-  md: 'h-9',
-  lg: 'h-11',
+  sm: 'h-7 w-24',
+  md: 'h-9 w-28',
+  lg: 'h-11 w-32',
 } as const;
 
-export function DuVisasLogo({
+/** Brand mark slot — intentionally empty (no logo asset). */
+export function VisagoLogo({
   className = '',
   size = 'md',
   to = '/home',
-  variant = 'color',
 }: {
   className?: string;
   size?: keyof typeof SIZES;
   to?: string;
   variant?: 'color' | 'white';
 }) {
-  const src = variant === 'white' ? '/du-visas-logo-white.png' : '/du-visas-logo.png';
-
   return (
-    <Link to={to} className={`inline-flex items-center ${className}`}>
-      <img
-        src={src}
-        alt="DU Visas"
-        className={`${SIZES[size]} w-auto object-contain`}
-      />
-    </Link>
+    <Link
+      to={to}
+      aria-label="Visago home"
+      className={`inline-block ${SIZES[size]} ${className}`}
+    />
   );
 }
 
-export function DuVisasLogoMark({
+/** Brand mark slot — intentionally empty (no logo asset). */
+export function VisagoLogoMark({
   className = '',
   size = 'md',
-  variant = 'white',
 }: {
   className?: string;
   size?: keyof typeof SIZES;
   variant?: 'color' | 'white';
 }) {
-  const src = variant === 'white' ? '/du-visas-logo-white.png' : '/du-visas-logo.png';
-
   return (
-    <img
-      src={src}
-      alt="DU Visas"
-      className={`${SIZES[size]} w-auto object-contain ${className}`}
+    <span
+      aria-hidden
+      className={`inline-block ${SIZES[size]} ${className}`}
     />
   );
 }

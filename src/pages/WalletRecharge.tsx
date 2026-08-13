@@ -40,7 +40,7 @@ export default function WalletRecharge() {
       <PaymentModal
         open={payOpen}
         amount={payAmount}
-        purpose="Wallet Recharge — DU Visas"
+        purpose="Wallet Recharge — Visago"
         onClose={() => setPayOpen(false)}
         onError={(msg) => show('error', msg)}
         onSuccess={(res) => {

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Check, Globe2, MonitorSmartphone, Plane } from 'lucide-react';
-import { DuVisasLogo } from '@/components/brand/Logo';
+import { VisagoLogo } from '@/components/brand/Logo';
 
 const BENEFITS = [
   'Access to visa dashboard',
@@ -62,9 +62,7 @@ export function AuthShell({ children }: { children: ReactNode }) {
         </div>
 
         <div className="relative z-10 h-full flex flex-col justify-between p-8 md:p-12 text-white">
-          <div className="rounded-xl bg-white px-3 py-2 w-fit shadow-lg">
-            <DuVisasLogo variant="color" size="md" to="/home" />
-          </div>
+          <VisagoLogo variant="color" size="md" to="/home" />
 
           <div className="max-w-lg mt-10 lg:mt-0">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/15 border border-white/25 px-3 py-1.5 text-[12px] font-medium backdrop-blur-md mb-5">
@@ -77,7 +75,7 @@ export function AuthShell({ children }: { children: ReactNode }) {
 
             <h1 className="text-[34px] md:text-[46px] font-semibold leading-[1.12] tracking-tight">
               Grow your travel business with{' '}
-              <span className="text-[#FFB4B4]">DU Visas</span>
+              <span className="text-[#FFB4B4]">Visago</span>
             </h1>
 
             <p className="mt-4 text-[15px] text-white/80 leading-relaxed">
@@ -121,8 +119,8 @@ export function AuthShell({ children }: { children: ReactNode }) {
         <Plane className="pointer-events-none absolute left-8 bottom-16 w-16 h-16 text-brand-blue/10 -rotate-6" />
 
         <div className="relative w-full max-w-[420px]">
-          <div className="mb-6 lg:hidden rounded-xl bg-white px-3 py-2 w-fit shadow-sm border border-[#E8ECF1]">
-            <DuVisasLogo variant="color" size="sm" to="/home" />
+          <div className="mb-6 lg:hidden">
+            <VisagoLogo variant="color" size="sm" to="/home" />
           </div>
           <div className="bg-white rounded-[18px] border border-[#E6EAF0] shadow-[0_24px_60px_rgba(15,23,42,0.10)] p-7 md:p-8">
             {children}

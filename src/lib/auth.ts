@@ -7,9 +7,9 @@ export type AuthUser = {
   mobile: string;
 };
 
-const AUTH_KEY = 'duvisas_auth';
-const USER_KEY = 'duvisas_user';
-const OTP_KEY = 'duvisas_otp_pending';
+const AUTH_KEY = 'visago_auth';
+const USER_KEY = 'visago_user';
+const OTP_KEY = 'visago_otp_pending';
 
 export function isAuthenticated(): boolean {
   return sessionStorage.getItem(AUTH_KEY) === '1';

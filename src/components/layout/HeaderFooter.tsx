@@ -3,7 +3,7 @@ import {
   Home, LogOut, Menu, X, UserCircle,
   UserCog, Plane, Layers, CreditCard, Wallet, Globe2,
 } from 'lucide-react';
-import { DuVisasLogoMark } from '@/components/brand/Logo';
+import { VisagoLogoMark } from '@/components/brand/Logo';
 import { getUser, signOut } from '@/lib/auth';
 
 const NAV = [
@@ -30,7 +30,7 @@ function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
     <div className="flex flex-col h-full">
       <div className="flex items-center gap-2.5 px-4 h-[60px] border-b border-white/10 shrink-0">
         <Link to="/home" onClick={onNavigate}>
-          <DuVisasLogoMark variant="color" size="md" />
+          <VisagoLogoMark variant="color" size="md" />
         </Link>
       </div>
 
@@ -116,7 +116,7 @@ export function TopBar({ onMenu }: { onMenu: () => void }) {
       <button onClick={onMenu} className="p-1.5 rounded-md hover:bg-white/10" aria-label="Open menu">
         <Menu className="w-5 h-5" />
       </button>
-      <DuVisasLogoMark variant="color" size="sm" />
+      <VisagoLogoMark variant="color" size="sm" />
     </div>
   );
 }
@@ -126,7 +126,7 @@ export function Footer() {
     <footer className="w-full">
       <div className="px-5 pt-4">
         <div className="h-[38px] rounded-t-[14px] bg-gradient-to-r from-brand-dark to-brand-blue flex items-center justify-center text-[10.5px] text-white/90 tracking-wide">
-          Powered by DU Visas © 2026
+          Powered by Visago © 2026
         </div>
       </div>
     </footer>

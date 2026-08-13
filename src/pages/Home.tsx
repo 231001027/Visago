@@ -24,7 +24,7 @@ export default function Home() {
             Book eVisas online for travel agents and clients
           </h1>
           <p className="mt-4 text-[16px] text-white/80 max-w-xl leading-relaxed">
-            DU Visas helps B2B agencies and B2C travelers apply, upload documents, and pay securely — all in one place.
+            Visago helps B2B agencies and B2C travelers apply, upload documents, and pay securely — all in one place.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/evisa-countries" className="h-[42px] px-5 rounded-[8px] bg-white text-brand-blue text-[13px] font-semibold inline-flex items-center gap-2">

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { DuVisasLogo } from '@/components/brand/Logo';
+import { VisagoLogo } from '@/components/brand/Logo';
 import { isAuthenticated, getUser, homePathForRole } from '@/lib/auth';
 
 const LINKS = [
@@ -21,7 +21,7 @@ export function PublicLayout() {
     <div className="min-h-screen flex flex-col bg-[#F7F9FC]">
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-[#E8ECF1]">
         <div className="max-w-content mx-auto px-5 h-[64px] flex items-center justify-between gap-4">
-          <DuVisasLogo to="/home" variant="color" size="md" />
+          <VisagoLogo to="/home" variant="color" size="md" />
 
           <nav className="hidden md:flex items-center gap-1">
             {LINKS.map((l) => (
@@ -90,7 +90,7 @@ export function PublicLayout() {
       <footer className="border-t border-[#E8ECF1] bg-white">
         <div className="max-w-content mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-[13px]">
           <div>
-            <DuVisasLogo to="/home" size="sm" />
+            <VisagoLogo to="/home" size="sm" />
             <p className="mt-3 text-sub leading-relaxed">
               Online passport & eVisa bookings for travel agents and clients.
             </p>
@@ -105,12 +105,12 @@ export function PublicLayout() {
           </div>
           <div>
             <p className="font-semibold text-ink mb-2">Support</p>
-            <p className="text-sub">Email: support@duvisas.com</p>
+            <p className="text-sub">Email: support@visago.com</p>
             <p className="text-sub mt-1">Payments: UPI · Net banking · Cards</p>
           </div>
         </div>
         <div className="border-t border-[#E8ECF1] text-center text-[11px] text-sub py-3">
-          © {new Date().getFullYear()} DU Visas. All rights reserved.
+          © {new Date().getFullYear()} Visago. All rights reserved.
         </div>
       </footer>
     </div>
